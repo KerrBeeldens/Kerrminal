@@ -1,2 +1,17 @@
 # Kerrminal
 Een klassiek tekst gebaseerd spel. Ontrafel het mysterie en leer Kerr kennen.
+
+# Dagelijkse check-out
+Hieronder volgt een korte reflectie op de projectvoortgang van elke dag.
+
+## Dinsdag 03/02/2026
+Tijdens de eerste dag is het doel van het project besproken, namelijk om een simpele website te bouwen waarmee anderen mij kunnen leren kennen. Ik had al vrij snel het idee om iets te doen met mijn liefde voor Retro Games. Om dit in mijn website te verwerken leek het mij een leuk idee om een retro style game te maken die in een soort verhaal informatie over mij geeft.
+
+Omdat de tijd voor dit project beperkt is, heb ik ervoor gekozen om de scope evenals te beperken. In plaats van dat ik een game maak zoals Tetris, Pokémon of Space Invaders, heb ik ervoor gekozen een text-based adventure game te maken. Een dergelijk spel is eenvoudig uit te breiden, waardoor ik klein kan beginnen en naar behoefte features kan toevoegen. Bij schoolopdrachten leg ik vaak de lat te hoog, dus wil ik mezelf uitdagen om in snel tempo iets simpels op het scherm te krijgen en hier frequent op te itereren, in plaats van een enkel, (te) groot doel na te streven.
+
+Tijdens de check-out van vandaag is er besproken welke leerdoelen ik wil hebben tijdens de minor. Ik heb uiteindelijk de volgende drie gekozen (voor nu):
+
+- Tijdens mijn major komt het menselijke aspect van software ontwikkeling weinig aan bod. Ik wil tijdens de minor leren om een website te ontwerpen die gebruiksvriendelijk is en principes die hieraan ten grondslag liggen beter begrijpen.
+- Ik wil leren meer te itereren over mijn werk en minder tijd te spenderen aan kleine details verbeteren. Ik wil dus minder gericht zijn op een groot en ambitieus doel, en me meer richten op een klein prototypes maken en deze uitbreiden tot een steeds complexer geheel. 
+
+Morgen ben ik van plan om een ontwerp te maken en te starten aan het bouwen van de website.
