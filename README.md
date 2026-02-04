@@ -15,3 +15,8 @@ Tijdens de check-out van vandaag is er besproken welke leerdoelen ik wil hebben 
 - Ik wil leren meer te itereren over mijn werk en minder tijd te spenderen aan kleine details verbeteren. Ik wil dus minder gericht zijn op een groot en ambitieus doel, en me meer richten op een klein prototypes maken en deze uitbreiden tot een steeds complexer geheel. 
 
 Morgen ben ik van plan om een ontwerp te maken en te starten aan het bouwen van de website.
+
+## Woensdag 04/02/2026
+Ik heb vandaag stappen gezet met het ontwerpen van mijn website en heb een basis gemaakt voor de achterliggende JavaScript code. Dit duurde een uur of 5. Daarnaast heb ik de themasessie gevolgd over scroll driven animaties. Hier heb ik voor het eerst gewerkt met animaties in CSS, dit had ik namelijk nog niet eerder gedaan. 
+
+Morgen ben ik van plan om mijn leerdoelen en thema's te vewerken in de website, zodat ik voor vrijdag een goedwerkende eerste versie heb. Met de tijd die ik over heb wil ik mijn best doen nog wat meer aandacht te vestigen op het ontwerp verbeteren.
