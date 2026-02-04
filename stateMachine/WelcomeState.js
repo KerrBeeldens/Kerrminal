@@ -7,10 +7,22 @@ export class WelcomeState extends BaseState {
         super(context);
         // clear the terminal (hard reset)
         this.context.terminal.clear();
-        this.context.terminal.showLine("Kerrminal");
+        this.context.terminal.showLine(" /$$   /$$                                             /$$                     /$$");
+        this.context.terminal.showLine("| $$  /$$/                                            |__/                    | $$");
+        this.context.terminal.showLine("| $$ /$$/   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$/$$$$  /$$ /$$$$$$$   /$$$$$$ | $$");
+        this.context.terminal.showLine("| $$$$$/   /$$__  $$ /$$__  $$ /$$__  $$| $$_  $$_  $$| $$| $$__  $$ |____  $$| $$");
+        this.context.terminal.showLine("| $$  $$  | $$$$$$$$| $$  \\__/| $$  \\__/| $$ \\ $$ \\ $$| $$| $$  \\ $$  /$$$$$$$| $$");
+        this.context.terminal.showLine("| $$\\  $$ | $$_____/| $$      | $$      | $$ | $$ | $$| $$| $$  | $$ /$$__  $$| $$");
+        this.context.terminal.showLine("| $$ \\  $$|  $$$$$$$| $$      | $$      | $$ | $$ | $$| $$| $$  | $$|  $$$$$$$| $$");
+        this.context.terminal.showLine("|__/  \\__/ \\_______/|__/      |__/      |__/ |__/ |__/|__/|__/  |__/ \\_______/|__/");
+
+        this.context.terminal.showLine(" ");
+
         this.context.terminal.showLine("reset - reset this console");
         this.context.terminal.showLine("echo - echo your command");
         this.context.terminal.showLine("whoami - show personal information");
+
+        this.context.terminal.showLine(" ");
     }
 
     async handleCommand(command) {

@@ -33,6 +33,7 @@ export class Terminal {
             if (e.key === 'Enter' && inputLineField.value !== "") {
                 this.#context.handleCommand(inputLineField.value);
                 this.#terminalWindow.append(this.#inputLine);
+                this.showLine(inputLineField.value);
                 inputLineField.value = "";
                 inputLineField.select();
             }
