@@ -8,3 +8,50 @@ body,
 html {
     height: 100%;
 }
+
+.desktop {
+    height: 100%;
+    background-image: url("resources/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terminal {
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-rows: 5% 1fr;
+}
+
+.terminal-header {
+    background-color: rgb(15, 15, 15);
+    border: 0px solid black;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.terminal-window {
+    background-color: rgba(15, 15, 15, 0.65);
+    backdrop-filter: blur(10px);
+    border: 0px solid black;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.header-text {
+    font-family: sans-serif;
+    color: rgb(150, 150, 150);
+    font-size: 0.75rem;
+}
+
+.close-icon {
+    color: rgb(150, 150, 150);
+    margin-left: auto;
+}
