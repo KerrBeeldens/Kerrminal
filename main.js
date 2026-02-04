@@ -10,7 +10,4 @@ inputline.addEventListener('keyup', function (e) {
         inputline.value = "";
         // parse text
     }
-
-    //inputline.value = "";
-    console.log(e.key);
 });
