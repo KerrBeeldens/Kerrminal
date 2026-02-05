@@ -1,4 +1,4 @@
-import { getStudentData } from "../display/FDND/Fdnd.js";
+import { getStudentData } from "../FDND/Fdnd.js";
 import { BaseState } from "./BaseState.js";
 
 export class WelcomeState extends BaseState {
@@ -18,9 +18,9 @@ export class WelcomeState extends BaseState {
 
         this.context.terminal.showLine(" ");
 
-        this.context.terminal.showLine("reset - reset this console");
-        this.context.terminal.showLine("echo - echo your command");
-        this.context.terminal.showLine("whoami - show personal information");
+        this.context.terminal.showLine("reset   reset Kerrminal");
+        this.context.terminal.showLine("echo    echo your command");
+        this.context.terminal.showLine("whoami  show personal information");
 
         this.context.terminal.showLine(" ");
     }
@@ -39,8 +39,8 @@ export class WelcomeState extends BaseState {
                 let personalData = await getStudentData(302);
                 if (personalData) {
                     console.log(personalData.name);
-                    this.context.terminal.showLine("Naam: " + personalData.name);
-                    this.context.terminal.showLine("Bijnaam: " + personalData.nickname);
+                    this.context.terminal.showLine("Naam:       " + personalData.name);
+                    this.context.terminal.showLine("Bijnaam:    " + personalData.nickname);
                     this.context.terminal.showLine("Verjaardag: " + personalData.birthdate);
                 } else {
                     this.context.terminal.showLine("Failed to fetch personal data.");
