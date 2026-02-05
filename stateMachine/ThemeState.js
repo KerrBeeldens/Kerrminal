@@ -10,6 +10,10 @@ export class ThemeState extends BaseState {
 
         this.context.terminal.showLine(" ");
 
+        this.context.terminal.showLine("man [command]         Get more info about a command");
+
+        this.context.terminal.showLine(" ");
+
         this.context.terminal.showLine("textcolor [r g b]     set the rgb value of the terminal text");
         this.context.terminal.showLine("windowcolor [r g b]   set the rgb color of the terminal window");
         this.context.terminal.showLine("wallpaper [name]      Set the background wallpaper");
@@ -23,8 +27,18 @@ export class ThemeState extends BaseState {
 
         switch (tokens[0]) {
             case "textcolor": // Change text color
+
+                // check input;
+                if (!this.isValidColor(tokens.slice(1))) return;
+
+                document.body.style.setProperty("--text-color-base", `rgb(${tokens[1]}, ${tokens[2]}, ${tokens[3]})`);
                 break;
-            case "windowcolor": // Change window color   
+            case "windowcolor": // Change window color  
+
+                // check input
+                if (!this.isValidColor(tokens.slice(1))) return;
+
+                document.body.style.setProperty("--terminal-color-base", `rgb(${tokens[1]}, ${tokens[2]}, ${tokens[3]})`);
                 break;
             case "wallpaper": // Set the background wallpaper
                 this.context.state = new WelcomeState(this.context);
@@ -32,5 +46,34 @@ export class ThemeState extends BaseState {
             default: // Unkown command, check if global command
                 super.handleCommand(command)
         }
+    }
+
+    isValidColor(tokens) {
+        if (tokens.length !== 3) {
+            this.context.terminal.showLine("Expecting 3 parameters but received " + tokens.length);
+            return false;
+        }
+
+        let r = tokens[0];
+        let g = tokens[1];
+        let b = tokens[2];
+
+        if (r > 255 || r < 0) {
+            this.context.terminal.showLine("Red channel should be between 0 and 255, but was " + r);
+            return false;
+        }
+
+        if (g > 255 || g < 0) {
+            this.context.terminal.showLine("Green channel should be between 0 and 255, but was " + g);
+            return false;
+        }
+
+
+        if (b > 255 || b < 0) {
+            this.context.terminal.showLine("Blue channel should be between 0 and 255, but was " + b);
+            return false;
+        }
+
+        return true;
     }
 }
