@@ -24,16 +24,21 @@ export class Terminal {
 
         this.#terminalWindow.append(this.inputLine);
 
+        // Handle input TODO move
         this.#terminalWindow.addEventListener("click", (e) => {
             inputLineField.select();
         });
 
-        // Handle input
         inputLineField.addEventListener('keyup', (e) => {
             if (e.key === 'Enter' && inputLineField.value !== "") {
-                this.#context.handleCommand(inputLineField.value);
+                // Echo user command
                 this.#terminalWindow.append(this.#inputLine);
                 this.showLine(inputLineField.value);
+
+                // Handle command
+                this.#context.handleCommand(inputLineField.value);
+
+                // Clear the input and select it again
                 inputLineField.value = "";
                 inputLineField.select();
             }
@@ -42,16 +47,30 @@ export class Terminal {
         this.#terminalWindow.append(this.#inputLine);
     }
 
+    focusInput() {
+        const input = this.#inputLine.querySelector("input");
+        input.focus();
+        input.select();
+    }
+
+
     showLine(line) {
         this.#inputLine.remove();
+
         let newLine = document.createElement("p");
         newLine.classList.add("terminal-line");
         newLine.textContent = line;
+
         this.#terminalWindow.appendChild(newLine);
         this.#terminalWindow.append(this.#inputLine);
+
+        this.focusInput();
     }
 
     clear() {
         this.#terminalWindow.innerHTML = "";
+        this.#terminalWindow.append(this.#inputLine);
+
+        this.focusInput();
     }
 }
