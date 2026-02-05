@@ -1,6 +1,6 @@
-import { getStudentData } from "../FDND/Fdnd.js";
 import { BaseState } from "./BaseState.js";
 import { ThemeState } from "./ThemeState.js";
+import { WhoamiState } from "./WhoamiState.js";
 
 export class WelcomeState extends BaseState {
 
@@ -29,10 +29,14 @@ export class WelcomeState extends BaseState {
 
         this.context.terminal.showLine(" ");
 
-        this.context.terminal.showLine("reset   reset Kerrminal");
-        this.context.terminal.showLine("echo    echo some text");
-        this.context.terminal.showLine("whoami  show personal information");
-        this.context.terminal.showLine("theme   enter theme menu")
+        this.context.terminal.showLine("man [command]         Get more info about a command");
+
+        this.context.terminal.showLine(" ");
+
+        this.context.terminal.showLine("echo                  echo some text");
+        this.context.terminal.showLine("whoami                show personal information");
+        this.context.terminal.showLine("theme                 enter theme menu")
+        this.context.terminal.showLine("reset                 reset Kerrminal");
 
         this.context.terminal.showLine(" ");
     }
@@ -45,15 +49,7 @@ export class WelcomeState extends BaseState {
                 this.context.terminal.showLine(tokens.slice(1).join(" "));
                 break;
             case "whoami": // print personal data   
-                let personalData = await getStudentData(302);
-                if (personalData) {
-                    console.log(personalData.name);
-                    this.context.terminal.showLine("Naam:       " + personalData.name);
-                    this.context.terminal.showLine("Bijnaam:    " + personalData.nickname);
-                    this.context.terminal.showLine("Verjaardag: " + personalData.birthdate);
-                } else {
-                    this.context.terminal.showLine("Failed to fetch personal data.");
-                }
+                this.context.state = new WhoamiState(this.context);
                 break;
             case "theme": // Enter theming menu, change state
                 this.context.state = new ThemeState(this.context);
