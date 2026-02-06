@@ -1,76 +1,96 @@
 export class Terminal {
+  #terminalWindow;
+  #inputLine;
+  #context; // TODO: Ugly dependency
 
-    #terminalWindow;
-    #inputLine;
-    #context; // TODO: Ugly dependency
+  constructor(context) {
+    this.#terminalWindow = document.querySelector(".terminal-window");
+    this.#inputLine = document.createElement("div");
+    this.#context = context; // TODO: remove
 
-    constructor(context) {
-        this.#terminalWindow = document.querySelector(".terminal-window");
-        this.#inputLine = document.createElement("div");
-        this.#context = context; // TODO: remove
+    // Construct an input field in the terminal
+    let inputLineIndicator = document.createElement("p");
+    inputLineIndicator.classList.add("input-line-indicator");
+    inputLineIndicator.textContent = ">";
 
-        // Construct an input field in the terminal
-        let inputLineIndicator = document.createElement("p");
-        inputLineIndicator.classList.add("input-line-indicator");
-        inputLineIndicator.textContent = ">";
+    let inputLineField = document.createElement("input");
+    inputLineField.id = "input-line-field";
+    inputLineField.type = "textarea";
+    inputLineField.autocomplete = "off";
 
-        let inputLineField = document.createElement("input");
-        inputLineField.id = "input-line-field";
-        inputLineField.type = "textarea";
-        inputLineField.autocomplete = "off";
+    this.#inputLine.classList.add("input-line");
+    this.#inputLine.append(inputLineIndicator, inputLineField);
 
-        this.#inputLine.classList.add("input-line");
-        this.#inputLine.append(inputLineIndicator, inputLineField);
+    this.#terminalWindow.append(this.inputLine);
 
-        this.#terminalWindow.append(this.inputLine);
+    // Handle input TODO move
 
-        // Handle input TODO move
-        this.#terminalWindow.addEventListener("click", (e) => {
-            inputLineField.select();
-        });
+    const close = document.querySelector(".close-icon");
+    close.addEventListener("click", () => {
+      this.minimise();
+    });
 
-        inputLineField.addEventListener('keyup', (e) => {
-            if (e.key === 'Enter' && inputLineField.value !== "") {
-                // Echo user command
-                this.#terminalWindow.append(this.#inputLine);
-                this.showLine("> " + inputLineField.value);
+    const open = document.querySelector(".shortcut");
+    open.addEventListener("click", () => {
+      this.open();
+      inputLineField.select();
+    });
 
-                // Handle command
-                this.#context.handleCommand(inputLineField.value);
+    this.#terminalWindow.addEventListener("click", (e) => {
+      inputLineField.select();
+    });
 
-                // Clear the input and select it again
-                inputLineField.value = "";
-                inputLineField.select();
-            }
-        });
-
+    inputLineField.addEventListener("keyup", (e) => {
+      if (e.key === "Enter" && inputLineField.value !== "") {
+        // Echo user command
         this.#terminalWindow.append(this.#inputLine);
-    }
+        this.showLine("> " + inputLineField.value);
 
-    focusInput() {
-        const input = this.#inputLine.querySelector("input");
-        input.focus();
-        input.select();
-    }
+        // Handle command
+        this.#context.handleCommand(inputLineField.value);
 
+        // Clear the input and select it again
+        inputLineField.value = "";
+        inputLineField.select();
+      }
+    });
 
-    showLine(line) {
-        this.#inputLine.remove();
+    this.#terminalWindow.append(this.#inputLine);
+  }
 
-        let newLine = document.createElement("p");
-        newLine.classList.add("terminal-line");
-        newLine.textContent = line;
+  focusInput() {
+    const input = this.#inputLine.querySelector("input");
+    input.focus();
+    input.select();
+  }
 
-        this.#terminalWindow.appendChild(newLine);
-        this.#terminalWindow.append(this.#inputLine);
+  showLine(line) {
+    this.#inputLine.remove();
 
-        this.focusInput();
-    }
+    let newLine = document.createElement("p");
+    newLine.classList.add("terminal-line");
+    newLine.textContent = line;
 
-    clear() {
-        this.#terminalWindow.innerHTML = "";
-        this.#terminalWindow.append(this.#inputLine);
+    this.#terminalWindow.appendChild(newLine);
+    this.#terminalWindow.append(this.#inputLine);
 
-        this.focusInput();
-    }
+    this.focusInput();
+  }
+
+  clear() {
+    this.#terminalWindow.innerHTML = "";
+    this.#terminalWindow.append(this.#inputLine);
+
+    this.focusInput();
+  }
+
+  minimise() {
+    const terminal = document.querySelector(".terminal");
+    terminal.style.setProperty("visibility", "hidden");
+  }
+
+  open() {
+    const terminal = document.querySelector(".terminal");
+    terminal.style.setProperty("visibility", "visible");
+  }
 }
