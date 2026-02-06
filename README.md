@@ -1,6 +1,6 @@
 # Kerrminal
 
-Een CLI stijl website om mij (Kerr) te leren kennen.
+Een CLI stijl website om mij (Kerr) te leren kennen. Beschikbaar via [Github Pages](https://kerrbeeldens.github.io/Kerrminal/).
 
 # Dagelijkse check-out
 
