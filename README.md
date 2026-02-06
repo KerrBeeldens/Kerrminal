@@ -1,6 +1,6 @@
 # Kerrminal
 
-Een klassiek tekst gebaseerd spel. Ontrafel het mysterie en leer Kerr kennen.
+Een CLI stijl website om mij (Kerr) te leren kennen.
 
 # Dagelijkse check-out
 
