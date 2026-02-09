@@ -59,3 +59,17 @@ loginForm.addEventListener("submit", onLogin);
 loginField.addEventListener("input", () => {
   loginField.setCustomValidity("");
 });
+
+// Source - https://stackoverflow.com/a/39418437
+// Posted by Pranav C Balan, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-02-09, License - CC BY-SA 4.0
+const time = document.querySelector(".time");
+
+function getTime() {
+  let d = new Date();
+  let m = d.getMinutes();
+  let h = d.getHours();
+  time.textContent = ("0" + h).slice(-2) + ":" + ("0" + m).slice(-2);
+}
+
+setInterval(getTime, 1000);

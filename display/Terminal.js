@@ -27,10 +27,10 @@ export class Terminal {
 
     const close = document.querySelector(".close-icon");
     close.addEventListener("click", () => {
-      this.minimise();
+      this.close();
     });
 
-    const open = document.querySelector(".shortcut");
+    const open = document.querySelector("#terminal-shortcut");
     open.addEventListener("click", () => {
       this.open();
       inputLineField.select();
@@ -84,13 +84,26 @@ export class Terminal {
     this.focusInput();
   }
 
-  minimise() {
+  close() {
     const terminal = document.querySelector(".terminal");
-    terminal.style.setProperty("visibility", "hidden");
+    const terminalTray = document.querySelector(".taskbar-tray");
+
+    terminalTray.classList.remove("on-tray");
+    terminalTray.classList.add("off-tray");
+
+    terminal.classList.remove("open-window");
+    terminal.classList.add("close-window");
   }
 
   open() {
     const terminal = document.querySelector(".terminal");
-    terminal.style.setProperty("visibility", "visible");
+
+    const terminalTray = document.querySelector(".taskbar-tray");
+
+    terminalTray.classList.add("on-tray");
+    terminalTray.classList.remove("off-tray");
+
+    terminal.classList.add("open-window");
+    terminal.classList.remove("close-window");
   }
 }
