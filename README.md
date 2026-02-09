@@ -31,3 +31,12 @@ Morgen ben ik van plan om mijn leerdoelen en thema's te vewerken in de website, 
 Vandaag heb ik hard gewerkt aan het functioneel maken van mijn website en javacode. Ik heb inmiddels een werkende terminal stijl applicatie, met enkele commando's om een thema te kunnen selecteren en informatie over studenten via de API op te halen. Dit duurde in totaal een uur of 6. Ik ben vandaag vooral bezig geweest met "busy work" om iets werkende te krijgen voor vrijdag, dus ik heb concreet niet veel geleerd (enkel wat handigheidjes).
 
 Morgen ben ik van plan op de puntjes op de i te zetten en een eerste, werkende versie van mijn applicatie online te krijgen. In het bijzonder wil ik de website een persoonlijke tintje geven.
+
+## Vrijdag 06/02/2026
+
+De website is nu werkend en ik heb de meeste elementen die ik in mijn eerste versie wilde hebben erin verwerkt. Vandaag heb ik vooral gewerkt aan het programmeren van wat commando's om de foto in de achtergrond van mijn "desktop" te kunnen veranderen naar persoonlijke foto's. Ook heb ik wat commando's toegevoegd die hier uitleg bij geven. Dit duurde een paar uur.
+
+Ik heb hiervan geleerd hoe ik CSS direct in Javascript kon veranderen. Dit had ik eerder nog niet gedaan.
+
+Aangezien ik het meeste dat ik wilde toevoegen nu heb, wil ik volgende week maandag de extra eis afwachten en werken aan deze implementeren.
+
