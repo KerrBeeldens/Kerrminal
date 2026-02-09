@@ -31,8 +31,10 @@ export class WhoamiState extends BaseState {
     this.context.terminal.showLine(" ");
   }
 
-  async getPersonalData(id) {
-    let personalData = await getStudentData(id);
+  getPersonalData(id) {
+    let personalData = getStudentData(123).then((data) => {
+      console.log(data);
+    });
 
     // TODO check null on any of the data
     if (personalData) {
