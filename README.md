@@ -40,3 +40,14 @@ Ik heb hiervan geleerd hoe ik CSS direct in Javascript kon veranderen. Dit had i
 
 Aangezien ik het meeste dat ik wilde toevoegen nu heb, wil ik volgende week maandag de extra eis afwachten en werken aan deze implementeren.
 
+# Dagelijkse check-out 09/02 - 12/02 2026
+
+Hieronder volgt een korte reflectie op de projectvoortgang van elke dag.
+
+## Maandag 09/02/2026
+
+Vandaag is de extra eis bekend gemaakt. Het doel was om iets te doen met de data van andere studenten. Dit had ik al in mijn werk verwerkt, maar ik had nog een ander idee hoe ik ook aan deze eis kon voldoen. Ik had het idee om een loginscherm te maken, waarmee de gebruiker kon inloggen alsof hij op een echte computer zat. Dit inloggen gebeurt met diens ID, waarna de naam en profielfoto te zien zijn op het loginscherm terwijl de computer "opstart".
+
+Ik heb vandaag gewerkt met animaties (specifiek transitions) om de login stappen te animeren. Ook heb ik als extraatje het openen en sluiten van het terminal venster geanimeerd. Dit was de eerste keer dat ik had gewerkt met transitions in CSS en ik heb dus geleerd hoe ik dit moet toepassen.
+
+Morgen wil ik mijn volledige code opschonen en de stijling van de website zo ver mogelijk afmaken. Op die manier hoef ik woensdag alleen nog maar kleine details verbeteren en probleempjes oplossen.
