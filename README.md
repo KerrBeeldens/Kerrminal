@@ -2,7 +2,7 @@
 
 Een CLI stijl website om mij (Kerr) te leren kennen. Beschikbaar via [Github Pages](https://kerrbeeldens.github.io/Kerrminal/).
 
-# Dagelijkse check-out
+# Dagelijkse check-out 03/02 - 06/02 2026
 
 Hieronder volgt een korte reflectie op de projectvoortgang van elke dag.
 
@@ -25,3 +25,9 @@ Morgen ben ik van plan om een ontwerp te maken en te starten aan het bouwen van 
 Ik heb vandaag stappen gezet met het ontwerpen van mijn website en heb een basis gemaakt voor de achterliggende JavaScript code. Dit duurde een uur of 5. Daarnaast heb ik de themasessie gevolgd over scroll driven animaties. Hier heb ik voor het eerst gewerkt met animaties in CSS, dit had ik namelijk nog niet eerder gedaan.
 
 Morgen ben ik van plan om mijn leerdoelen en thema's te vewerken in de website, zodat ik voor vrijdag een goedwerkende eerste versie heb. Met de tijd die ik over heb wil ik mijn best doen nog wat meer aandacht te vestigen op het ontwerp verbeteren.
+
+## Donderdag 05/02/2026
+
+Vandaag heb ik hard gewerkt aan het functioneel maken van mijn website en javacode. Ik heb inmiddels een werkende terminal stijl applicatie, met enkele commando's om een thema te kunnen selecteren en informatie over studenten via de API op te halen. Dit duurde in totaal een uur of 6. Ik ben vandaag vooral bezig geweest met "busy work" om iets werkende te krijgen voor vrijdag, dus ik heb concreet niet veel geleerd (enkel wat handigheidjes).
+
+Morgen ben ik van plan op de puntjes op de i te zetten en een eerste, werkende versie van mijn applicatie online te krijgen. In het bijzonder wil ik de website een persoonlijke tintje geven.
