@@ -14,10 +14,12 @@ body {
   --terminal-color-base: #0f0f0f;
 }
 
+/* === Lockscreen === */
+
 /* Source - https://stackoverflow.com/q/55504715
 Posted by hello
 Retrieved 2026-02-09, License - CC BY-SA 4.0 */
-.os-bootup {
+.lock-screen {
   background: #020024;
   position: fixed;
   inset: 0;
@@ -33,11 +35,11 @@ Retrieved 2026-02-09, License - CC BY-SA 4.0 */
   gap: 16px;
 }
 
-.open {
+.lock-screen-unlocked {
   transform: translateY(-100vh);
 }
 
-.os-login {
+.login-screen {
   position: fixed;
   inset: 0;
   z-index: 9;
@@ -47,12 +49,12 @@ Retrieved 2026-02-09, License - CC BY-SA 4.0 */
   visibility: visible;
 }
 
-.remove {
+.login-screen-remove {
   visibility: hidden;
 }
 
-.os-login-form,
-.os-login {
+.login-form,
+.login-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +62,7 @@ Retrieved 2026-02-09, License - CC BY-SA 4.0 */
   gap: 24px;
 }
 
-.pfp {
+.profile-picture {
   width: 20%;
   clip-path: circle();
 }
