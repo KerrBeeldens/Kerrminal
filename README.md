@@ -40,6 +40,24 @@ Ik heb hiervan geleerd hoe ik CSS direct in Javascript kon veranderen. Dit had i
 
 Aangezien ik het meeste dat ik wilde toevoegen nu heb, wil ik volgende week maandag de extra eis afwachten en werken aan deze implementeren.
 
+# Voorgang Week 1
+
+Ik ben zeer tevreden met de voortgang die ik heb gemaakt deze week. Mijn hoofddoel was om iteratief te werken en de deadline van vrijdag heeft hier goed bij geholpen. Het is me gelukt om een werkend product neer te zetten.
+
+In de onderstaande figuur is het startscherm van de website te zien. Ik heb zoals eerder aangegeven een terminal look-and-feel gemaakt. Ik wilde oorspronkelijk een text-based advanture maken, maar heb er later voor gekozen om meer te gaan voor een soort desktop omgeving met een terminal applicatie. Dit maakt het iets eenvoudiger om alle eisen te verwerken in de website.
+
+![alt text](documentatie/week_1_startscherm.png)
+
+In de figuur is te zien hoe de gebruiker commando's kan invoeren. Met het `echo` commando kan tekst in de terminal worden weergegeven (meer een soort test commando), met het `whoami` commando wordt er genavigeerd naar het `whoami` menu (hier zo meer over). Met het `theme` commando wordt er naar het `theme` menu genavigeerd (ook hier zo meer over). Met het `reset` commando wordt de terminal teruggezet naar de begin staat.
+
+![alt text](documentatie/week_1_persoonlijke_doelen.png)
+
+In de figuur hierboven is het `whoami` menu te zien. Met het `whois` commando is het mogelijk om informatie op te vragen uit de API van een specifiek persoon, met het `goal` commando kunnen mijn leerdoelen worden opgehaald en met het `whoami` commando kan wat extra informatie over mij in een specifieke categorie worden opgevraagt.
+
+![alt text](documentatie/week_1_thema.png)
+
+Als laatste is in de bovenstaande figuur het `theme` menu weergegeven. Hier is het mogelijk om de tekstkleur van de terminal aan te passen met het `textcolor` commando, de kleur van het venster is aan te passen met het `windowcolor` commando en de achtergrond van de "desktop" is te wijzigen met het `wallpaper` commando. De verschillende wallpapers zijn foto's van mij om het geheel een persoonlijk tintje te geven.
+
 # Dagelijkse check-out 09/02 - 12/02 2026
 
 Hieronder volgt een korte reflectie op de projectvoortgang van elke dag.
