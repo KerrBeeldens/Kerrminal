@@ -1,15 +1,24 @@
+/* Dark Theme */
 .theme-dark {
-  --text-color-terminal: green;
-  --text-color-base: white;
-  --terminal-color-base: #0f0f0f;
-  --desktop-wallpaper-url: url("../resources/background.jpg");
+  --text-base: white;
+  --text-terminal: green;
+  --bg-window: rgba(15, 15, 15, 0.65);
+  --bg-titlebar: rgba(15, 15, 15, 1);
+  --button: #bf616a;
+
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --desktop-wallpaper-url: url("../resources/background_dark.jpg");
   --theme-preview-url: url("../resources/theme_preview_dark.png");
 }
 
+/* Light Theme */
 .theme-light {
-  --text-color-terminal: white;
-  --text-color-base: black;
-  --terminal-color-base: #e6e6e6;
-  --desktop-wallpaper-url: url("../resources/background.jpg");
+  --text-base: black;
+  --text-terminal: #2e3440;
+  --bg-window: rgba(230, 230, 230, 0.65);
+  --bg-titlebar: rgba(230, 230, 230, 1);
+  --button: #bf616a;
+  --hover-bg: rgba(0, 0, 0, 0.1);
+  --desktop-wallpaper-url: url("../resources/background_light.jpg");
   --theme-preview-url: url("../resources/theme_preview_light.png");
 }

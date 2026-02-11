@@ -55,23 +55,39 @@ export class Window {
 
     this.#container.append(titlebar, this.#windowContent._content);
 
-    // Add the window to the desktop
-    let desktop = document.querySelector(".desktop");
-    desktop.append(this.#container);
+    // Add the window to the desktop on open, remove on close
+    this.#container.addEventListener("transitionend", (e) => {
+      if (e.target !== this.#container) return;
+      if (this.#container.classList.contains("window-closed")) {
+        this.#container.remove();
+      }
+    });
   }
 
   open() {
+    if (this.isOpen) return;
+
     this.isOpen = true;
     this.#windowContent.onOpen();
-    this.onOpen(this); // trigger external callback
-    this.#container.classList.add("window-opened");
-    this.#container.classList.remove("window-closed");
+    this.onOpen?.(this);
+    const desktop = document.querySelector(".desktop");
+    if (!this.#container.isConnected) {
+      desktop.append(this.#container);
+    }
+
+    requestAnimationFrame(() => {
+      this.#container.classList.add("window-opened");
+      this.#container.classList.remove("window-closed");
+    });
   }
 
   close() {
+    if (!this.isOpen) return;
+
     this.isOpen = false;
     this.#windowContent.onClose();
-    this.onClose(this); // trigger external callback
+    this.onClose?.(this);
+
     this.#container.classList.remove("window-opened");
     this.#container.classList.add("window-closed");
   }
@@ -79,7 +95,8 @@ export class Window {
   minimise() {
     this.isOpen = false;
     this.#windowContent.onMinimise();
-    this.onMinimise(this); // trigger external callback
+    this.onMinimise?.(this);
+
     this.#container.classList.remove("window-opened");
     this.#container.classList.add("window-closed");
   }

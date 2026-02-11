@@ -1,5 +1,5 @@
 .taskbar {
-  background-color: var(--terminal-color-base);
+  background-color: var(--bg-titlebar);
   display: flex;
   align-items: center;
   width: 100vw;
@@ -9,7 +9,7 @@
 }
 
 .taskbar-icon {
-  color: var(--text-color-base);
+  color: var(--text-base);
   font-size: 16px;
 }
 
@@ -26,52 +26,47 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  height: 100%;
 }
 
-/* Style the dropdown button */
 .dropdown-button {
   border: none;
+  outline: none;
   background-color: transparent;
-  color: var(--text-color-base);
-  border: none;
+  color: var(--text-base);
   cursor: pointer;
-  height: 100%;
   padding: 0 16px;
+  height: 100%;
 }
 
-/* Dropdown content */
 .dropdown-content {
   display: none;
   position: absolute;
   bottom: 100%;
   left: 0;
-  background-color: var(--terminal-color-base);
+  background-color: var(--bg-titlebar);
   min-width: 200px;
   z-index: 9999;
 }
 
-/* Links inside dropdown content */
 .dropdown-item {
-  color: var(--text-color-base);
+  color: var(--text-base);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   cursor: pointer;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-item:hover {
-  background-color: #e3e3e3; /* TODO */
+  background-color: var(--hover-bg);
 }
 
-/* Show the dropdown content on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Change background color of dropdown button on hover */
 .dropdown:hover .dropdown-button {
-  background-color: #e3e3e3; /* TODO */
+  background-color: var(--hover-bg);
 }
 
 .taskbar-windows {
@@ -82,11 +77,11 @@
 }
 
 .taskbar-window {
-  background-color: #333; /* TODO */
-  border-left: 1px solid #333; /* TODO */
-  border-right: 1px solid #333; /* TODO */
+  background-color: var(--bg-titlebar);
+  border-left: 1px solid var(--bg-titlebar);
+  border-right: 1px solid var(--bg-titlebar);
   height: 100%;
-  width: 96px;
+  width: 128px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,21 +89,21 @@
   padding: 4px 8px;
   transform: translateY(100%);
   transition:
-    transform 0.25s ease,
-    background-color 0.125s 0.25s;
+    transform 0.125s ease,
+    background-color 0.125s;
 }
 
 .taskbar-window-text {
-  color: var(--text-color-base);
+  color: var(--text-base);
 }
 
 .taskbar-window-icon {
-  height: 8px;
+  height: 75%;
 }
 
 .taskbar-window-opened {
   transform: translateY(0);
-  background-color: #333; /* TODO */
+  background-color: var(--hover-bg);
 }
 
 .taskbar-window-closed {
@@ -121,5 +116,5 @@
 }
 
 .taskbar-time {
-  color: var(--text-color-base);
+  color: var(--text-base);
 }

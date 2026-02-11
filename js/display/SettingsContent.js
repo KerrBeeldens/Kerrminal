@@ -5,7 +5,6 @@ export class SettingsContent extends WindowContent {
     super();
     this._content.classList.add("settings-window");
 
-    // Create settings menu
     const header = document.createElement("h1");
     header.classList.add("settings-heading");
     header.textContent = "Settings";
@@ -26,16 +25,37 @@ export class SettingsContent extends WindowContent {
 
     const themes = ["dark", "light"];
 
+    let currentTheme;
+    if (document.body.classList.contains("theme-dark")) currentTheme = "dark";
+    else if (document.body.classList.contains("theme-light"))
+      currentTheme = "light";
+    else {
+      currentTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      document.body.classList.add(`theme-${currentTheme}`);
+    }
+
     themes.forEach((themeName) => {
-      let themeOption = document.createElement("option");
-      themeOption.value = themeName;
-      themeOption.textContent = themeName; // TODO capital letter
-      themeSelect.appendChild(themeOption);
+      const option = document.createElement("option");
+      option.classList.add("settings-theme-select-option");
+      option.value = themeName;
+      option.textContent =
+        themeName.charAt(0).toUpperCase() + themeName.slice(1);
+
+      if (themeName === currentTheme) option.selected = true;
+
+      themeSelect.appendChild(option);
     });
 
+    themePreviewImage.src = `../resources/theme_preview_${currentTheme}.png`;
+
     themeSelect.addEventListener("change", (e) => {
+      const selected = e.target.value;
+
       document.body.className = "";
-      document.body.classList.add(`theme-${e.target.value}`);
+      document.body.classList.add(`theme-${selected}`);
+      themePreviewImage.src = `../resources/theme_preview_${selected}.png`;
     });
 
     this._content.append(

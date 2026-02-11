@@ -2,6 +2,7 @@
   position: absolute;
   top: 16px;
   left: 16px;
+  cursor: pointer;
 }
 
 .shortcut {
@@ -16,7 +17,7 @@
 }
 
 .shortcut:hover {
-  background-color: #0004; /* TODO */
+  background-color: var(--hover-bg);
 }
 
 .shortcut-icon {
@@ -25,5 +26,5 @@
 
 .shortcut-text {
   font-size: 0.75rem;
-  color: white; /* TODO */
+  color: var(--text-base);
 }

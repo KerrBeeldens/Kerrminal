@@ -12,21 +12,20 @@ Retrieved 2026-02-09, License - CC BY-SA 4.0 */
   height: 100vh;
   margin: 0;
   transition: transform 0.5s;
-  color: var(--text-color-base);
+  color: white;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 64px;
+  padding: clamp(8px, 5vw, 16px) clamp(32px, 5vh, 64px);
   flex-direction: column;
-  gap: 8px;
 }
 
 .lock-screen-date {
-  font-size: 4rem;
+  font-size: clamp(2em, 5vw, 4em);
 }
 
 .lock-screen-time {
-  font-size: 8rem;
+  font-size: clamp(3em, 10vw, 7em);
 }
 
 .lock-screen-unlocked {

@@ -2,7 +2,7 @@
   position: fixed;
   inset: 0;
   z-index: 9;
-  background-color: oklch(from var(--terminal-color-base) l c h / 0.65);
+  background-color: var(--bg-window);
   backdrop-filter: blur(10px);
   transition: visibility 0s 4s;
   visibility: visible;
@@ -28,13 +28,19 @@
 
 .login-field-label,
 .welcome-message {
-  color: var(--text-color-base);
+  color: var(--text-base);
   font: bold;
   text-align: center;
+  font-size: 1.25rem;
 }
 
 #login-field {
   display: block;
+  font-size: 1.25rem;
+}
+
+#login-field:focus {
+  outline: 1px solid var(--accent);
 }
 
 /* Soure: https://css-loaders.com/spinner/ */
@@ -43,8 +49,10 @@
   padding: 8px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: var(--text-color-base);
-  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  background: var(--text-base);
+  --_m:
+    conic-gradient(#0000 10%, var(--text-base)),
+    linear-gradient(var(--text-base) 0 0) content-box;
   -webkit-mask: var(--_m);
   mask: var(--_m);
   -webkit-mask-composite: source-out;
@@ -58,14 +66,14 @@
 }
 
 #login-button {
-  background-color: #333; /* TODO */
+  background-color: var(--button);
   border: none;
-  color: var(--text-color-base);
+  color: var(--text-base);
   padding: 4px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.25rem;
   cursor: pointer;
   border-radius: 16px;
 }

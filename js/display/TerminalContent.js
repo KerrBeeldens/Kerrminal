@@ -16,29 +16,29 @@ export class TerminalContent extends WindowContent {
     inputLineIndicator.classList.add("input-line-indicator");
     inputLineIndicator.textContent = ">";
 
-    let inputLineField = document.createElement("input");
-    inputLineField.id = "input-line-field";
-    inputLineField.autocomplete = "off";
+    this.inputLineField = document.createElement("input");
+    this.inputLineField.id = "input-line-field";
+    this.inputLineField.autocomplete = "off";
 
     this.#inputLine.classList.add("input-line");
-    this.#inputLine.append(inputLineIndicator, inputLineField);
+    this.#inputLine.append(inputLineIndicator, this.inputLineField);
 
     this.display();
 
     // When the terminal is clicked, focus on the input
     this._content.addEventListener("click", (e) => {
-      inputLineField.select();
+      this.inputLineField.select();
     });
 
     // On user input, handle the command
-    inputLineField.addEventListener("keyup", async (e) => {
-      if (e.key === "Enter" && inputLineField.value !== "") {
-        const input = inputLineField.value;
+    this.inputLineField.addEventListener("keyup", async (e) => {
+      if (e.key === "Enter" && this.inputLineField.value !== "") {
+        const input = this.inputLineField.value;
         await this.#terminal.handleCommand(input);
         this.display();
 
-        inputLineField.value = "";
-        inputLineField.select();
+        this.inputLineField.value = "";
+        this.inputLineField.select();
       }
     });
   }
@@ -92,8 +92,7 @@ export class TerminalContent extends WindowContent {
 
   // TODO both functions
   onOpen() {
-    let inputLineField = document.querySelector("#input-line-field");
-    inputLineField.select();
+    this.inputLineField.select();
   }
 
   focusInput() {

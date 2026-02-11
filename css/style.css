@@ -4,18 +4,41 @@
   box-sizing: border-box;
 }
 
-:root {
-  --text-color-terminal: green;
-  --text-color-base: white;
-  --terminal-color-base: #0f0f0f;
-  --desktop-wallpaper-url: url("../resources/background.jpg");
-  --theme-preview-url: url("../resources/theme_preview_dark.png");
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-base: black;
+    --text-terminal: #2e3440;
+    --bg-window: rgba(230, 230, 230, 0.65);
+    --bg-titlebar: rgba(230, 230, 230, 1);
+    --button: #bf616a;
+    --hover-bg: rgba(0, 0, 0, 0.1);
+    --desktop-wallpaper-url: url("../resources/background_light.jpg");
+    --theme-preview-url: url("../resources/theme_preview_light.png");
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-base: white;
+    --text-terminal: green;
+    --bg-window: rgba(15, 15, 15, 0.65);
+    --bg-titlebar: rgba(15, 15, 15, 1);
+    --button: #149adc;
+    --hover-bg: rgba(255, 255, 255, 0.1);
+    --desktop-wallpaper-url: url("../resources/background_dark.jpg");
+    --theme-preview-url: url("../resources/theme_preview_dark.png");
+  }
+}
+
+html {
+  font-family: "Noto Sans", sans-serif;
 }
 
 body,
 html {
   height: 100%;
   background-color: black;
+  overflow: hidden;
 }
 
 .desktop {
