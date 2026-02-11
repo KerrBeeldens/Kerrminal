@@ -82,4 +82,38 @@ Morgen is de laatste dag dat ik aan dit project werk en mijn doel is om het opsc
 
 Vandaag heb ik de website afgemaakt. Zoals ik gisteren al had aangegeven heb ik vooral gewerkt aan het toevoegen van de thema's en het opschonen van de stijling zodat er (hopelijk) geen grote slordigheden in zitten. Ik heb ook kritisch naar de responsiveness gekeken van de website en dit verbetert waar nodig.
 
-Ik heb vandaag niets concreet geleerd, ik ben vooral druk bezig geweest met de laaste problemen oplossen en de website af te maken.
+IK heb vandaag geleerd hoe ik verschillende themas kan inladen op mijn website en ik heb geleerd hoe ik op basis van de voorkeuren van de gebruiker een thema kan inladen.
+
+Morgen zal ik mijn werk presenteren :).
+
+# Voorgang Week 2
+
+In week 2 heb ik een nadruk gelegd op stijling, animaties en responsiveness. Ik was bekend met de basisconcepten, maar het toepassen van deze aspecten was nieuw voor mij en was met name waarmee ik in deze opdracht mijn niveau wilde overstijgen. Ik denk dat dit goed gelukt is.
+
+Verder heb ik deze week gewerkt aan de context rondom de terminal applicatie. De terminal applicatie zelf voldeed aan de opdrachtomschrijving, maar mij leek het leuk om de website in zijn geheel op een desktop omgeving te laten lijken qua interactie. Ik heb deze week een toolbar toegevoegd en shortcuts waarmee het mogelijk is om de terminal applicatie te open. Ook werd deze week de tweede eis bekend gemaakt. Ik moest iets doen met de data van mede studenten en ondanks dat dit ik in principe al had verwerkt in mijn terminal applicatie, leek het mij leuk als studenten konden "inloggen" op de desktop omgeving met hun ID.
+
+![alt text](documentatie/week_2_login.png)
+
+In de bovenstaande figuur is het loginscherm weergegeven. De gebruiker wordt gevraagd om zijn ID in te voeren. Hierna wordt op basis van deze ID de naam en profielfoto van de gebruiker getoont in een (nep) laadscherm. Hierna komt de gebruiker terecht in de desktop omgeving. Het laadscherm is weergegeven in de onderstaande figuur.
+
+![alt text](documentatie/week_2_data.png)
+
+Een laatste functionaliteit die ik heb toegevoegd is een settings applicatie waarmee verschillende themas kunnen worden geselecteerd. Ik had dit vorige week al verwerkt in de terminal, maar ik heb het daar uitgehaald, omdat het mij leuker leek om zelf een paar thema's op te zetten. Daarnaast gaf het de mogelijkheid om een tweede "applicatie" te maken voor de desktop omgeving, zodat de gebruiker nog iets meer het gevoel kreeg binnen zo'n omgeving te werken.
+
+![alt text](documentatie/week_2_settings.png)
+
+In de bovenstaande figuur is de settings applicatie weergegeven terwijl het alternatieve thema "animals" is geselecteerd. Elk thema stelt als achtergrond een persoonlijke foto in die betrekking heeft op een van de `whoami` commando's. Er zijn een stuk of tien thema's, waaronder een standaard licht en donker thema.
+
+Voor de rest heb ik hard gewerkt aan alles oplever klaar te krijgen, door bronnen te vermelden, bugs uit mijn code te halen en de code netter te schrijven. Tijdens de volgende projecten hoop ik hard te kunnen werken aan mijn leerdoelen. Ook hoop ik dat de langere periode die ik heb voor deze projecten ervoor zorgt dat ik nog net iets meer stil kan staan bij wat ik wil maken en hoe dit eruit komt te zien en hoe ik dit ga implementeren, omdat ik bij dit eerste project wel het gevoel had steeds "door" te moeten.
+
+# Bronnen
+
+Hieronder volgt een bronnenlijst die ik heb gebruikt in mijn code:
+
+- [https://stackoverflow.com/q/55504715](https://stackoverflow.com/q/55504715) voor de layering van het lockscreen.
+- [https://css-loaders.com/spinner/](https://css-loaders.com/spinner) voor de spinner op het loginscherm.
+- [https://www.w3schools.com/css/css_dropdowns.asp](https://www.w3schools.com/css/css_dropdowns.asp) voor de dropdown op de taskbar.
+- [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) voor het gebruik van de fetch API voor het inladen van data.
+- [https://stackoverflow.com/a/39418437](https://stackoverflow.com/a/39418437) Voor het toevoegen van een live clock op het lockscreen en op de taskbar.
+
+Verder heb ik op verschillende plaatsen ChatGPT gebruikt om bugs te vinden in mijn code of om te sparren over de architectuur van mijn code.
