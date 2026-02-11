@@ -1,7 +1,7 @@
 export class Shortcut {
   constructor(name, icon, window) {
     this.name = name;
-    this.content; // TODO not the cleanest way to do this
+    this.content;
 
     // Conststuct the shortcut
     this.content = document.createElement("div");

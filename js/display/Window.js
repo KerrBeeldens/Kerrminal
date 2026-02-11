@@ -16,10 +16,6 @@ export class Window {
     const titlebar = document.createElement("div");
     titlebar.classList.add("window-titlebar");
 
-    const titlebarIcon = document.createElement("img");
-    titlebarIcon.classList.add("window-titlebar-icon");
-    titlebarIcon.scr = this.icon;
-
     const titlebarName = document.createElement("p");
     titlebarName.classList.add("window-titlebar-text");
     titlebarName.textContent = this.name;
@@ -46,12 +42,7 @@ export class Window {
     titlebarCloseButtonIcon.textContent = "close";
     titlebarCloseButton.append(titlebarCloseButtonIcon);
 
-    titlebar.append(
-      titlebarName,
-      titlebarIcon,
-      titlebarMinimiseButton,
-      titlebarCloseButton,
-    );
+    titlebar.append(titlebarName, titlebarMinimiseButton, titlebarCloseButton);
 
     this.#container.append(titlebar, this.#windowContent._content);
 

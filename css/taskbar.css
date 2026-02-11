@@ -87,6 +87,7 @@
   justify-content: center;
   gap: 8px;
   padding: 4px 8px;
+  cursor: pointer;
   transform: translateY(100%);
   transition:
     transform 0.125s ease,

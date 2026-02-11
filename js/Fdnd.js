@@ -13,7 +13,7 @@ export async function getStudentData(id) {
     }
 
     const result = await response.json();
-    return result.data; // 👈 this is the actual student object
+    return result.data;
   } catch (error) {
     throw new Error(`Could not fetch data: ${error.message}`);
   }

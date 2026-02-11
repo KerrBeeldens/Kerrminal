@@ -87,17 +87,15 @@ export class TerminalContent extends WindowContent {
 
     // Add inputline back
     this._content.append(this.#inputLine);
-    this.focusInput(); // TODO
+    this.inputLineField.focus();
+    this.inputLineField.select();
   }
 
-  // TODO both functions
   onOpen() {
     this.inputLineField.select();
   }
 
-  focusInput() {
-    const input = this.#inputLine.querySelector("input");
-    input.focus();
-    input.select();
+  onClose() {
+    this.#terminal.clear();
   }
 }

@@ -95,7 +95,7 @@ loginForm.addEventListener("submit", async (e) => {
 
   const profilePicture = document.createElement("img");
   profilePicture.classList.add("profile-picture");
-  profilePicture.src = studentData.avatar || "resources/pfp.png"; // TODO on 404
+  profilePicture.src = studentData.avatar || "resources/pfp.png";
 
   const welcomeText = document.createElement("p");
   welcomeText.classList.add("welcome-message");
@@ -136,7 +136,6 @@ let shortcuts = document.querySelector(".shortcuts");
 shortcuts.append(terminalShortcut.content);
 
 /* === Settings Window === */
-// const settings = new Terminal();
 const settingsContent = new SettingsContent();
 const settingsWindow = new Window(
   "Settings",
