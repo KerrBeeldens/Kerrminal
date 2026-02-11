@@ -1,0 +1,93 @@
+.window {
+  width: min(1200px, 90vw);
+  height: min(80vh, calc(100vh - 96px));
+  bottom: 64px;
+  position: fixed;
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  z-index: 3;
+  opacity: 0;
+  transform: scale(0);
+  transition:
+    opacity 0.125s,
+    transform 0.125s;
+}
+
+.window-opened {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.window-closed {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.window-titlebar {
+  min-height: 40px;
+  background-color: var(--bg-titlebar);
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.window-titlebar:active {
+  cursor: grabbing;
+}
+
+.window-titlebar-text {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 8px;
+}
+
+.window-minimise-button {
+  margin-left: auto;
+}
+
+.window-minimise-button,
+.window-close-button {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+}
+
+.window-minimise-button:hover,
+.window-close-button:hover {
+  background: var(--hover-bg);
+}
+
+.window-minimise-icon,
+.window-close-icon,
+.window-titlebar-text {
+  color: var(--text-base);
+  font-size: 16px;
+}
+
+.window-content {
+  background-color: var(--bg-window);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 4px 4px;
+  padding: 12px;
+  width: 100%;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-titlebar);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-bg);
+}
