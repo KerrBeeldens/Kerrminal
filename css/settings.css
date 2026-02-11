@@ -1,0 +1,24 @@
+.settings-window {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.settings-theme-select {
+  width: 30%;
+}
+
+.settings-theme-preview-text {
+  margin-top: 16px;
+  font-weight: bold;
+  color: var(--text-color-base);
+}
+
+.settings-theme-preview {
+  content: var(--theme-preview-url);
+  width: 75%;
+}
+
+.settings-heading {
+  color: var(--text-color-base);
+}

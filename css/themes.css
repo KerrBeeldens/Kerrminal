@@ -1,0 +1,15 @@
+.theme-dark {
+  --text-color-terminal: green;
+  --text-color-base: white;
+  --terminal-color-base: #0f0f0f;
+  --desktop-wallpaper-url: url("../resources/background.jpg");
+  --theme-preview-url: url("../resources/theme_preview_dark.png");
+}
+
+.theme-light {
+  --text-color-terminal: white;
+  --text-color-base: black;
+  --terminal-color-base: #e6e6e6;
+  --desktop-wallpaper-url: url("../resources/background.jpg");
+  --theme-preview-url: url("../resources/theme_preview_light.png");
+}

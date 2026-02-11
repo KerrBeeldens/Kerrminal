@@ -8,8 +8,19 @@
       type="image/x-icon"
       href="resources/fav_icon.svg"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script type="module" src="main.js" defer></script>
+    <!-- Themes -->
+    <link rel="stylesheet" href="./css/themes.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/lockscreen.css" />
+    <link rel="stylesheet" href="./css/loginscreen.css" />
+    <link rel="stylesheet" href="./css/shortcut.css" />
+    <link rel="stylesheet" href="./css/taskbar.css" />
+    <link rel="stylesheet" href="./css/window.css" />
+    <link rel="stylesheet" href="./css/terminal.css" />
+    <link rel="stylesheet" href="./css/settings.css" />
+    <script type="module" src="./js/main.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
@@ -19,9 +30,8 @@
 
   <body>
     <div class="lock-screen">
-      <p>Welcome to</p>
-      <p>Kerr OS</p>
-      <p>Providing a slightly buggy experience since 2000</p>
+      <p class="lock-screen-time"></p>
+      <p class="lock-screen-date"></p>
     </div>
 
     <div class="login-screen">
@@ -35,38 +45,33 @@
     </div>
 
     <div class="desktop">
-      <div class="shortcuts">
-        <div id="terminal-shortcut" class="shortcut">
-          <img class="shortcut-icon" src="resources/fav_icon.svg" />
-          <p class="shortcut-text">Kerrminal</p>
-        </div>
-
-        <div id="settings-shortcut" class="shortcut">
-          <img class="shortcut-icon" src="resources/settings_icon.svg" />
-          <p class="shortcut-text">Settings</p>
-        </div>
-      </div>
-      <div class="terminal">
-        <div class="terminal-header">
-          <p class="header-text">Kerrminal</p>
-          <span class="material-symbols-outlined close-icon"> close </span>
-        </div>
-        <div class="terminal-window"></div>
-      </div>
+      <div class="shortcuts"></div>
 
       <footer class="taskbar">
-        <div class="icons-left">
-          <span class="material-symbols-outlined"> power_settings_new </span>
-          <span class="taskbar-tray"
-            ><img src="resources/fav_icon.svg" />Kerrminal</span
-          >
+        <!-- Source: https://www.w3schools.com/css/css_dropdowns.asp -->
+        <div class="dropdown">
+          <button class="dropdown-button">
+            <div class="material-symbols-outlined taskbar-icon">
+              power_settings_new
+            </div>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-item power-button-off">Power Off</div>
+            <div class="dropdown-item power-button-sleep">Sleep</div>
+          </div>
         </div>
 
-        <div class="icons-right">
-          <span class="material-symbols-outlined"> wifi </span>
-          <span class="material-symbols-outlined"> volume_up </span>
-          <span class="material-symbols-outlined"> battery_android_4 </span>
-          <span class="time">14:25</span>
+        <div class="taskbar-windows"></div>
+
+        <div class="taskbar-icons-right">
+          <span class="material-symbols-outlined taskbar-icon"> wifi </span>
+          <span class="material-symbols-outlined taskbar-icon">
+            volume_up
+          </span>
+          <span class="material-symbols-outlined taskbar-icon">
+            battery_android_4
+          </span>
+          <span class="taskbar-time">14:25</span>
         </div>
       </footer>
     </div>

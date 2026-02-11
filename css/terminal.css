@@ -1,0 +1,47 @@
+.terminal-line,
+#input-line-field,
+.input-line-indicator {
+  color: var(--text-color-base);
+  position: relative;
+  z-index: 4;
+  text-shadow: 0px 0px 4px var(--text-color-base);
+  font-weight: bold;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.input-line {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 0.5em;
+  caret-shape: block;
+}
+
+#input-line-field {
+  background-color: transparent;
+  border: none;
+  flex-grow: 1;
+}
+
+#input-line-field:focus {
+  outline: none;
+}
+
+/* Default: show normal text, hide ASCII art */
+.header-ascii {
+  display: none;
+}
+
+.header-normal {
+  display: block;
+}
+
+@media (min-width: 85ch) {
+  .header-ascii {
+    display: block;
+  }
+  .header-normal {
+    display: none;
+  }
+}

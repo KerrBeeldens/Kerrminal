@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color-terminal: green;
+  --text-color-base: white;
+  --terminal-color-base: #0f0f0f;
+  --desktop-wallpaper-url: url("../resources/background.jpg");
+  --theme-preview-url: url("../resources/theme_preview_dark.png");
+}
+
+body,
+html {
+  height: 100%;
+  background-color: black;
+}
+
+.desktop {
+  height: 100vh;
+  width: 100vw;
+  background-image: var(--desktop-wallpaper-url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

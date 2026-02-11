@@ -1,0 +1,29 @@
+.shortcuts {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.shortcut {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 8px;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.shortcut:hover {
+  background-color: #0004; /* TODO */
+}
+
+.shortcut-icon {
+  width: 32px;
+}
+
+.shortcut-text {
+  font-size: 0.75rem;
+  color: white; /* TODO */
+}

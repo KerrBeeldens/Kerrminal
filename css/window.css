@@ -1,0 +1,93 @@
+.window {
+  width: 90%;
+  height: 90%;
+  position: fixed;
+  display: grid;
+  grid-template-rows: 5% 1fr;
+  z-index: 3;
+  opacity: 0;
+  transform: scale(0);
+  pointer-events: none;
+  transition:
+    opacity 0.125s,
+    transform 0.125s;
+}
+
+.window-opened {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.window-closed {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.window-titlebar {
+  background-color: var(--terminal-color-base);
+  border: 0px solid oklch(from var(--terminal-color-base) calc(l * 0.5) c h);
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+}
+
+.window-titlebar-text {
+  font-family: sans-serif;
+}
+
+.window-minimise-icon,
+.window-close-icon,
+.window-titlebar-text {
+  color: var(--text-color-base);
+  font-size: 16px;
+}
+
+.window-minimise-button {
+  margin-left: auto;
+}
+
+.window-minimise-icon:hover {
+  color: white; /* TODO */
+}
+
+.window-close-icon:hover {
+  color: white; /* TODO */
+}
+
+.window-minimise-button,
+.window-close-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.window-content {
+  background-color: oklch(from var(--terminal-color-base) l c h / 0.65);
+  backdrop-filter: blur(10px);
+  border: 0px solid oklch(from var(--terminal-color-base) calc(l * 0.5) c h);
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px;
+  width: 100%;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(from var(--terminal-color-base) calc(l * 2.5) c h);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(from var(--terminal-color-base) calc(l * 3) c h);
+}

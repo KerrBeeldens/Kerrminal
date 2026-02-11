@@ -12,8 +12,8 @@ export async function getStudentData(id) {
       throw new Error(`Response status: ${response.status}`);
     }
 
-    const data = await response.json();
-    return data;
+    const result = await response.json();
+    return result.data; // 👈 this is the actual student object
   } catch (error) {
     throw new Error(`Could not fetch data: ${error.message}`);
   }

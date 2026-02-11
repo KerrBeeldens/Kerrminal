@@ -1,0 +1,34 @@
+/* Source - https://stackoverflow.com/q/55504715
+Posted by hello
+Retrieved 2026-02-09, License - CC BY-SA 4.0 */
+.lock-screen {
+  background: url(../resources/lockscreen.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  height: 100vh;
+  margin: 0;
+  transition: transform 0.5s;
+  color: var(--text-color-base);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 64px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lock-screen-date {
+  font-size: 4rem;
+}
+
+.lock-screen-time {
+  font-size: 8rem;
+}
+
+.lock-screen-unlocked {
+  transform: translateY(-100vh);
+}
