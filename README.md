@@ -51,3 +51,11 @@ Vandaag is de extra eis bekend gemaakt. Het doel was om iets te doen met de data
 Ik heb vandaag gewerkt met animaties (specifiek transitions) om de login stappen te animeren. Ook heb ik als extraatje het openen en sluiten van het terminal venster geanimeerd. Dit was de eerste keer dat ik had gewerkt met transitions in CSS en ik heb dus geleerd hoe ik dit moet toepassen.
 
 Morgen wil ik mijn volledige code opschonen en de stijling van de website zo ver mogelijk afmaken. Op die manier hoef ik woensdag alleen nog maar kleine details verbeteren en probleempjes oplossen.
+
+## Dinsdag 10/02/2026
+
+Deze dag heb ik vooral gewerkt aan het verder opschonen van de code. Ik wilde graag een settings "applicatie" maken voor mijn website waar de gebruiker thema's kan aanpassen. Ik heb hiervoor een window klasse gemaakt, waardoor het mogelijk is nieuwe applicaties (naast de terminal) te maken die in een venster worden weergegeven. Ik heb op een vergelijkbare manier een shortcut en taskbar klasse gemaakt. Dit duurde een uur of 7.
+
+Ik heb vandaag geleerd om met behulp van een media query de ASCII art van de terminal responsive te maken. Ik had al eerder dit geprobeert via de code, maar met mijn nieuw gestructureerde code is het nu mogelijk om dit op deze manier dynamisch te doen.
+
+Morgen is de laatste dag dat ik aan dit project werk en mijn doel is om het opschonen van de code af te maken, zodat ik thema's kan toevoegen aan het settings venster. Vervolgens wil ik vooral de puntjes op de i zetten als het gaat om de stijling van alles, omdat er nu nog veel kleine slordigheden in de website zitten.
