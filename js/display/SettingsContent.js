@@ -23,7 +23,18 @@ export class SettingsContent extends WindowContent {
     const themePreviewImage = document.createElement("img");
     themePreviewImage.classList.add("settings-theme-preview");
 
-    const themes = ["dark", "light"];
+    const themes = [
+      "dark",
+      "light",
+      "animals",
+      "baking",
+      "boardgames",
+      "girlfriend",
+      "halloween",
+      "harry",
+      "gaming",
+      "study",
+    ];
 
     let currentTheme;
     if (document.body.classList.contains("theme-dark")) currentTheme = "dark";

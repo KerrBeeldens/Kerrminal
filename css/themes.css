@@ -1,4 +1,3 @@
-/* Dark Theme */
 .theme-dark {
   --text-base: white;
   --text-terminal: green;
@@ -11,7 +10,6 @@
   --theme-preview-url: url("../resources/theme_preview_dark.png");
 }
 
-/* Light Theme */
 .theme-light {
   --text-base: black;
   --text-terminal: #2e3440;
@@ -21,4 +19,92 @@
   --hover-bg: rgba(0, 0, 0, 0.1);
   --desktop-wallpaper-url: url("../resources/background_light.jpg");
   --theme-preview-url: url("../resources/theme_preview_light.png");
+}
+
+.theme-animals {
+  --text-base: white;
+  --text-terminal: white;
+  --bg-window: rgba(125, 182, 72, 0.65);
+  --bg-titlebar: rgb(62, 92, 34);
+  --button: rgb(124, 156, 94);
+  --hover-bg: rgba(0, 0, 0, 0.1);
+  --desktop-wallpaper-url: url("../resources/animals.jpg");
+  --theme-preview-url: url("../resources/theme_preview_animals.png");
+}
+
+.theme-baking {
+  --text-base: white;
+  --text-terminal: #ffc29c;
+  --bg-window: rgba(229, 107, 50, 0.65);
+  --bg-titlebar: rgb(112, 54, 9);
+  --button: #402101;
+  --hover-bg: rgb(220, 130, 62);
+  --desktop-wallpaper-url: url("../resources/baking.jpg");
+  --theme-preview-url: url("../resources/theme_preview_baking.png");
+}
+
+.theme-boardgames {
+  --text-base: black;
+  --text-terminal: rgb(10, 80, 91);
+  --bg-window: rgba(105, 223, 234, 0.65);
+  --bg-titlebar: rgb(20, 142, 166);
+  --button: #a1edee;
+  --hover-bg: rgb(123, 229, 233);
+  --desktop-wallpaper-url: url("../resources/boardgames.jpg");
+  --theme-preview-url: url("../resources/theme_preview_boardgames.png");
+}
+
+.theme-girlfriend {
+  --text-base: white;
+  --text-terminal: #e89fcd;
+  --bg-window: rgba(123, 14, 114, 0.65);
+  --bg-titlebar: rgb(59, 8, 46);
+  --button: #5f1b48;
+  --hover-bg: rgb(200, 124, 171);
+  --desktop-wallpaper-url: url("../resources/girlfriend.jpg");
+  --theme-preview-url: url("../resources/theme_preview_girlfriend.png");
+}
+
+.theme-halloween {
+  --text-base: white;
+  --text-terminal: #ff8e03;
+  --bg-window: rgba(3, 0, 0, 0.65);
+  --bg-titlebar: rgb(223, 118, 20);
+  --button: #b47517;
+  --hover-bg: rgb(238, 160, 87);
+  --desktop-wallpaper-url: url("../resources/halloween.png");
+  --theme-preview-url: url("../resources/theme_preview_halloween.png");
+}
+
+.theme-harry {
+  --text-base: white;
+  --text-terminal: #ffe345;
+  --bg-window: rgba(74, 20, 145, 0.65);
+  --bg-titlebar: rgb(46, 6, 83);
+  --button: #340f5c;
+  --hover-bg: rgba(117, 56, 222);
+  --desktop-wallpaper-url: url("../resources/harry_potter.jpg");
+  --theme-preview-url: url("../resources/theme_preview_harry.png");
+}
+
+.theme-gaming {
+  --text-base: black;
+  --text-terminal: #2e3440;
+  --bg-window: rgba(255, 230, 186, 0.65);
+  --bg-titlebar: rgb(198, 171, 136);
+  --button: #f4c59e;
+  --hover-bg: rgba(0, 0, 0, 0.2);
+  --desktop-wallpaper-url: url("../resources/retrogames.jpg");
+  --theme-preview-url: url("../resources/theme_preview_gaming.png");
+}
+
+.theme-study {
+  --text-base: white;
+  --text-terminal: green;
+  --bg-window: rgba(15, 15, 15, 0.65);
+  --bg-titlebar: rgba(15, 15, 15, 1);
+  --button: #bf616a;
+  --hover-bg: rgb(81, 81, 81);
+  --desktop-wallpaper-url: url("../resources/study.jpg");
+  --theme-preview-url: url("../resources/theme_preview_study.png");
 }
