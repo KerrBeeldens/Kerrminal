@@ -59,3 +59,9 @@ Deze dag heb ik vooral gewerkt aan het verder opschonen van de code. Ik wilde gr
 Ik heb vandaag geleerd om met behulp van een media query de ASCII art van de terminal responsive te maken. Ik had al eerder dit geprobeert via de code, maar met mijn nieuw gestructureerde code is het nu mogelijk om dit op deze manier dynamisch te doen.
 
 Morgen is de laatste dag dat ik aan dit project werk en mijn doel is om het opschonen van de code af te maken, zodat ik thema's kan toevoegen aan het settings venster. Vervolgens wil ik vooral de puntjes op de i zetten als het gaat om de stijling van alles, omdat er nu nog veel kleine slordigheden in de website zitten.
+
+## Woensdag 11/02/2026
+
+Vandaag heb ik de website afgemaakt. Zoals ik gisteren al had aangegeven heb ik vooral gewerkt aan het toevoegen van de thema's en het opschonen van de stijling zodat er (hopelijk) geen grote slordigheden in zitten. Ik heb ook kritisch naar de responsiveness gekeken van de website en dit verbetert waar nodig.
+
+Ik heb vandaag niets concreet geleerd, ik ben vooral druk bezig geweest met de laaste problemen oplossen en de website af te maken.
